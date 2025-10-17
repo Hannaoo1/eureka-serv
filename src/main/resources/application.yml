@@ -1,0 +1,13 @@
+server:   
+  port: 8765
+spring: 
+  application:
+    name: d-service
+
+eureka: 
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    # 중요: 자신의 포트를 포함한 defaultZone 명시
+    service-url:
+      defaultZone: http://localhost:8765/eureka/  
